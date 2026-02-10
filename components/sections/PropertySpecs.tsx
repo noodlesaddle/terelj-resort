@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function PropertySpecs() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -24,9 +26,9 @@ export default function PropertySpecs() {
     }, []);
 
     const resortSpecs = [
-        { label: "Name", value: "TERELJ RESORT" },
-        { label: "Total Land Area", value: "5 hectares" },
-        { label: "Location", value: "Terelj National Park, Mongolia" },
+        { labelKey: "specs.name", valueKey: "specs.nameValue" },
+        { labelKey: "specs.landArea", valueKey: "specs.landAreaValue" },
+        { labelKey: "specs.location", valueKey: "specs.locationValue" },
     ];
 
     const houseOptions = [
@@ -35,14 +37,14 @@ export default function PropertySpecs() {
         { size: "40 sqm", bedrooms: "Studio", occupancy: "2 people" },
     ];
 
-    const facilities = [
-        "Restaurant",
-        "Event Hall",
-        "Hotel",
-        "Spa",
-        "Pilates Studio",
-        "Onsen (Hot Spring)",
-        "Wellness Services",
+    const facilitiesKeys = [
+        "specs.restaurant",
+        "specs.eventHall",
+        "specs.hotel",
+        "specs.spa",
+        "specs.pilates",
+        "specs.onsen",
+        "specs.wellness",
     ];
 
     return (
@@ -56,7 +58,7 @@ export default function PropertySpecs() {
                     className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-16 md:mb-24 text-center tracking-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}
                 >
-                    SPEC
+                    {t("specs.title")}
                 </h2>
 
                 {/* Resort Information */}
@@ -66,16 +68,16 @@ export default function PropertySpecs() {
                             <div
                                 key={index}
                                 className={`border-b border-gray-200 pb-6 md:pb-8 transition-all duration-700 ${isVisible
-                                        ? 'opacity-100 translate-y-0'
-                                        : 'opacity-0 translate-y-8'
+                                    ? 'opacity-100 translate-y-0'
+                                    : 'opacity-0 translate-y-8'
                                     }`}
                                 style={{ transitionDelay: `${index * 100}ms` }}
                             >
                                 <dt className="text-xs md:text-sm text-gray-500 mb-3 tracking-wider uppercase">
-                                    {spec.label}
+                                    {t(spec.labelKey)}
                                 </dt>
                                 <dd className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed">
-                                    {spec.value}
+                                    {t(spec.valueKey)}
                                 </dd>
                             </div>
                         ))}
@@ -89,7 +91,7 @@ export default function PropertySpecs() {
                             }`}
                         style={{ transitionDelay: '300ms' }}
                     >
-                        Private House Options
+                        {t("specs.houseOptions")}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {houseOptions.map((house, index) => (
@@ -120,20 +122,20 @@ export default function PropertySpecs() {
                             }`}
                         style={{ transitionDelay: '700ms' }}
                     >
-                        Resort Facilities
+                        {t("specs.facilities")}
                     </h3>
                     <div
                         className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                             }`}
                         style={{ transitionDelay: '800ms' }}
                     >
-                        {facilities.map((facility, index) => (
+                        {facilitiesKeys.map((key, index) => (
                             <div
                                 key={index}
                                 className="text-lg font-light text-gray-700 flex items-center"
                             >
                                 <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                                {facility}
+                                {t(key)}
                             </div>
                         ))}
                     </div>

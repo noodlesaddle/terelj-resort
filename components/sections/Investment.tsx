@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Investment() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -25,27 +27,27 @@ export default function Investment() {
 
     const highlights = [
         {
-            title: "Prime Location",
+            titleKey: "invest.primeLocation",
             description: "Located in Terelj National Park, Mongolia's premier tourist destination, just 60 minutes from the capital city.",
         },
         {
-            title: "Growing Tourism",
+            titleKey: "invest.growingTourism",
             description: "Mongolia's tourism sector is experiencing rapid growth with increasing international visitors year over year.",
         },
         {
-            title: "Unique Offering",
+            titleKey: "invest.uniqueOffering",
             description: "First luxury resort of its kind in the region, combining traditional hospitality with world-class amenities.",
         },
         {
-            title: "Multiple Revenue Streams",
+            titleKey: "invest.multipleRevenue",
             description: "Hotel, restaurant, spa, event hall, and wellness services provide diversified income sources.",
         },
         {
-            title: "5 Hectare Development",
+            titleKey: "invest.development",
             description: "Expansive property with room for future expansion and development opportunities.",
         },
         {
-            title: "Year-Round Operation",
+            titleKey: "invest.yearRound",
             description: "Four-season destination with activities and attractions throughout the year.",
         },
     ];
@@ -62,10 +64,10 @@ export default function Investment() {
                         }`}
                 >
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                        Investment Opportunity
+                        {t("invest.title")}
                     </h2>
                     <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto">
-                        Be part of Mongolia's premier luxury resort development
+                        {t("invest.subtitle")}
                     </p>
                 </div>
 
@@ -79,7 +81,7 @@ export default function Investment() {
                         >
                             <div className="h-full p-8 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-300">
                                 <h3 className="text-2xl font-bold mb-4 tracking-tight">
-                                    {highlight.title}
+                                    {t(highlight.titleKey)}
                                 </h3>
                                 <p className="text-base font-light text-gray-600 leading-relaxed">
                                     {highlight.description}

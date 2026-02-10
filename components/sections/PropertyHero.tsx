@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const heroImages = [
     "/renders/Pasted Image4.jpg",
@@ -13,6 +14,7 @@ const heroImages = [
 export default function PropertyHero() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const { t } = useLanguage();
 
     useEffect(() => {
         setIsLoaded(true);
@@ -51,10 +53,10 @@ export default function PropertyHero() {
             <div className={`absolute bottom-0 left-0 right-0 px-8 md:px-16 pb-16 md:pb-24 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}>
                 <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-6">
-                    TERELJ RESORT
+                    {t("hero.title")}
                 </h1>
                 <p className="text-white/90 text-lg md:text-xl lg:text-2xl font-light tracking-wide">
-                    Located in Terelj National Park, Mongolia
+                    {t("hero.subtitle")}
                 </p>
             </div>
 

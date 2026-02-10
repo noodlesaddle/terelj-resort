@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function DarkIntro() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -37,27 +39,23 @@ export default function DarkIntro() {
                     className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                         }`}
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 tracking-tight leading-tight">
-                        Your Escape from
-                        <br />
-                        Scorching Summer Heat
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 tracking-tight leading-tight whitespace-pre-line">
+                        {t("intro.title")}
                     </h2>
-                    <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-8 text-white/90">
-                        Experience Mongolia's cool, refreshing summers while staying connected to work.
-                        <br className="hidden md:block" />
-                        The perfect blend of vacation and productivity.
+                    <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-8 text-white/90 whitespace-pre-line">
+                        {t("intro.subtitle")}
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                         <div>
-                            <h3 className="text-2xl font-bold mb-4">Summer Climate</h3>
+                            <h3 className="text-2xl font-bold mb-4">{t("intro.climate.title")}</h3>
                             <p className="text-lg text-white/70 font-light leading-relaxed">
-                                While cities swelter at 35-40°C, Terelj offers comfortable 20-25°C temperatures. Cool mountain air, clear blue skies, and pristine nature provide the perfect summer retreat.
+                                {t("intro.climate.desc")}
                             </p>
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold mb-4">Work & Wellness</h3>
+                            <h3 className="text-2xl font-bold mb-4">{t("intro.work.title")}</h3>
                             <p className="text-lg text-white/70 font-light leading-relaxed">
-                                High-speed internet, modern workspaces, and wellness facilities let you maintain productivity while enjoying spa treatments, onsen baths, and nature walks after work.
+                                {t("intro.work.desc")}
                             </p>
                         </div>
                     </div>

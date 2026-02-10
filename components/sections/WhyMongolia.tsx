@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function WhyMongolia() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -26,29 +28,29 @@ export default function WhyMongolia() {
     const stats = [
         {
             number: "846K",
-            label: "International Visitors",
-            sublabel: "in 2025, +46% YoY growth",
+            labelKey: "why.visitors",
+            sublabelKey: "why.visitorsSubtitle",
         },
         {
             number: "$2.1B",
-            label: "Tourism Revenue",
-            sublabel: "Growing sector of economy",
+            labelKey: "why.revenue",
+            sublabelKey: "why.revenueSubtitle",
         },
         {
             number: "#1",
-            label: "Tourist Destination",
-            sublabel: "Terelj National Park",
+            labelKey: "why.destination",
+            sublabelKey: "why.destinationSubtitle",
         },
         {
             number: "60 min",
-            label: "From Capital",
-            sublabel: "Easy accessibility",
+            labelKey: "why.fromCapital",
+            sublabelKey: "why.fromCapitalSubtitle",
         },
     ];
 
     const reasons = [
         {
-            title: "Why Mongolia?",
+            titleKey: "why.mongolia",
             points: [
                 "Fastest growing tourism market in Asia",
                 "Government prioritizing tourism development",
@@ -59,7 +61,7 @@ export default function WhyMongolia() {
             ],
         },
         {
-            title: "Why Terelj National Park?",
+            titleKey: "why.terelj",
             points: [
                 "Mongolia's most visited national park",
                 "Year-round destination with diverse activities",
@@ -87,10 +89,10 @@ export default function WhyMongolia() {
                         }`}
                 >
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                        The Opportunity
+                        {t("why.title")}
                     </h2>
                     <p className="text-xl md:text-2xl font-light text-white/80 max-w-3xl mx-auto">
-                        Mongolia's tourism sector is experiencing unprecedented growth
+                        {t("why.subtitle")}
                     </p>
                 </div>
 
@@ -109,10 +111,10 @@ export default function WhyMongolia() {
                                 {stat.number}
                             </div>
                             <div className="text-base md:text-lg font-light mb-1">
-                                {stat.label}
+                                {t(stat.labelKey)}
                             </div>
                             <div className="text-xs md:text-sm text-white/60 font-light">
-                                {stat.sublabel}
+                                {t(stat.sublabelKey)}
                             </div>
                         </div>
                     ))}
@@ -128,7 +130,7 @@ export default function WhyMongolia() {
                             style={{ transitionDelay: `${(sectionIndex + 4) * 150}ms` }}
                         >
                             <h3 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight">
-                                {section.title}
+                                {t(section.titleKey)}
                             </h3>
                             <ul className="space-y-4">
                                 {section.points.map((point, pointIndex) => (
@@ -152,7 +154,7 @@ export default function WhyMongolia() {
                     style={{ transitionDelay: '900ms' }}
                 >
                     <h4 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">
-                        Market Insights
+                        {t("why.insights")}
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base md:text-lg font-light text-white/80">
                         <div>

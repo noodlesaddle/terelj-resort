@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Location() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -37,7 +39,7 @@ export default function Location() {
                     {/* Header */}
                     <div className="flex justify-between items-start mb-12 md:mb-16">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                            ACCESS
+                            {t("location.title")}
                         </h2>
                         <p className="text-xs md:text-sm text-gray-400 text-right font-light">
                             Terelj National Park, Mongolia
@@ -49,7 +51,7 @@ export default function Location() {
                         {/* Map */}
                         <div className="relative w-full h-[400px] md:h-[500px] bg-gray-50 rounded-lg overflow-hidden">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.8447891234567!2d107.4667!3d47.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96925d0b0b0b0b%3A0x0!2zNDfCsDU5JzAwLjAiTiAxMDfCsDI4JzAwLjAiRQ!5e0!3m2!1sen!2smn!4v1234567890&style=feature:all|element:geometry|color:0xf5f5f5&style=feature:all|element:labels.text.fill|color:0x616161&style=feature:all|element:labels.text.stroke|color:0xf5f5f5&style=feature:water|element:geometry|color:0xe0e0e0"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10659.387156493827!2d107.45670000000001!3d47.983300000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96925d0b0b0b0b%3A0x0!2zNDfCsDU5JzAwLjAiTiAxMDfCsDI3JzI0LjEiRQ!5e0!3m2!1sen!2smn!4v1234567890&style=feature:all|element:geometry|color:0xf5f5f5&style=feature:all|element:labels.text.fill|color:0x616161&style=feature:all|element:labels.text.stroke|color:0xf5f5f5&style=feature:water|element:geometry|color:0xe0e0e0"
                                 width="100%"
                                 height="100%"
                                 style={{
@@ -67,33 +69,33 @@ export default function Location() {
                             {/* By Car */}
                             <div>
                                 <h3 className="text-xl md:text-2xl font-light mb-4 tracking-tight">
-                                    By Car
+                                    {t("location.byCar")}
                                 </h3>
                                 <p className="text-sm md:text-base text-gray-500 font-light leading-relaxed mb-3">
-                                    Approximately 60 minutes from Chinggis Khaan International Airport
+                                    Approximately 60 {t("location.minutes")} from Chinggis Khaan International Airport
                                 </p>
                                 <p className="text-2xl md:text-3xl font-light">
-                                    60 minutes
+                                    60 {t("location.minutes")}
                                 </p>
                             </div>
 
                             {/* By Helicopter */}
                             <div>
                                 <h3 className="text-xl md:text-2xl font-light mb-4 tracking-tight">
-                                    By Helicopter
+                                    {t("location.byHelicopter")}
                                 </h3>
                                 <p className="text-sm md:text-base text-gray-500 font-light leading-relaxed mb-3">
                                     Direct transfer from Chinggis Khaan Airport heliport on site
                                 </p>
                                 <p className="text-2xl md:text-3xl font-light">
-                                    20 minutes
+                                    20 {t("location.minutes")}
                                 </p>
                             </div>
 
                             {/* Google Maps Link */}
                             <div className="pt-8 border-t border-gray-200">
                                 <a
-                                    href="https://maps.app.goo.gl/EpNTTokqQDkGDSET6"
+                                    href="https://maps.app.goo.gl/aE5qNTZe5pH6b9Jd6"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-xs md:text-sm text-gray-400 hover:text-black transition-colors duration-300 font-light flex items-center gap-2"
