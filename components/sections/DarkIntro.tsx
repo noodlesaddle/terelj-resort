@@ -38,16 +38,34 @@ export default function DarkIntro() {
                         }`}
                 >
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 tracking-tight leading-tight">
-                        A New Way of Living
+                        Your Escape from
+                        <br />
+                        Scorching Summer Heat
                     </h2>
                     <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-8 text-white/90">
-                        Nestled in the pristine wilderness of Terelj National Park,
+                        Experience Mongolia's cool, refreshing summers while staying connected to work.
                         <br className="hidden md:block" />
-                        our resort offers an unparalleled retreat into nature.
+                        The perfect blend of vacation and productivity.
                     </p>
-                    <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed max-w-3xl">
-                        Spanning 5 hectares of untouched landscape, the resort features exclusive private villas alongside world-class amenities including a spa, restaurant, and wellness center. Every detail has been crafted to create a harmonious balance between luxury and the natural environment.
-                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        <div>
+                            <h3 className="text-2xl font-bold mb-4">Summer Climate</h3>
+                            <p className="text-lg text-white/70 font-light leading-relaxed">
+                                While cities swelter at 35-40°C, Terelj offers comfortable 20-25°C temperatures. Cool mountain air, clear blue skies, and pristine nature provide the perfect summer retreat.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold mb-4">Work & Wellness</h3>
+                            <p className="text-lg text-white/70 font-light leading-relaxed">
+                                High-speed internet, modern workspaces, and wellness facilities let you maintain productivity while enjoying spa treatments, onsen baths, and nature walks after work.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="mt-12 pt-8 border-t border-white/20">
+                        <p className="text-base md:text-lg text-white/60 font-light">
+                            <strong className="text-white font-normal">5 hectares</strong> of pristine landscape • <strong className="text-white font-normal">Private villas</strong> with modern amenities • <strong className="text-white font-normal">Restaurant, Spa, Onsen</strong> & wellness center • <strong className="text-white font-normal">60 minutes</strong> from Ulaanbaatar
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
