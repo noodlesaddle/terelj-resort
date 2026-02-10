@@ -6,18 +6,33 @@ import { useState, useEffect, useRef } from "react";
 const layouts = [
     {
         id: 1,
-        title: "Site Plan",
-        image: "/renders/Image.png",
+        title: "Hotel Layout 1",
+        image: "/layouts/layout1.png",
     },
     {
         id: 2,
-        title: "Floor Plan",
-        image: "/renders/Image(3.png",
+        title: "Hotel Layout 2",
+        image: "/layouts/layout2.png",
     },
     {
         id: 3,
-        title: "Elevation",
-        image: "/renders/Image(5.png",
+        title: "Service Area 1",
+        image: "/layouts/layout3.png",
+    },
+    {
+        id: 4,
+        title: "Service Area 2",
+        image: "/layouts/layout4.png",
+    },
+    {
+        id: 5,
+        title: "Service Area 3",
+        image: "/layouts/layout5.png",
+    },
+    {
+        id: 6,
+        title: "Service Area 4",
+        image: "/layouts/layout6.png",
     },
 ];
 
@@ -57,7 +72,7 @@ export default function Layouts() {
             className="py-24 md:py-32 px-8 md:px-16 bg-white"
         >
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                     {layouts.map((layout, index) => (
                         <div
                             key={layout.id}

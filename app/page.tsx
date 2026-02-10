@@ -1,10 +1,9 @@
 import PropertyHero from "@/components/sections/PropertyHero";
 import PropertyGallery from "@/components/sections/PropertyGallery";
 import DarkIntro from "@/components/sections/DarkIntro";
-import Layouts from "@/components/sections/Layouts";
-import PropertySpecs from "@/components/sections/PropertySpecs";
 import FloorPlan from "@/components/sections/FloorPlan";
 import Location from "@/components/sections/Location";
+import PropertySpecs from "@/components/sections/PropertySpecs";
 import Navigation from "@/components/Navigation";
 
 export default function Home() {
@@ -14,10 +13,9 @@ export default function Home() {
       <PropertyHero />
       <PropertyGallery />
       <DarkIntro />
-      <Layouts />
+      <FloorPlan />
       <Location />
       <PropertySpecs />
-      <FloorPlan />
     </main>
   );
 }
