@@ -29,7 +29,7 @@ export default function Location() {
         <section
             ref={sectionRef}
             id="location"
-            className="py-24 md:py-32 px-8 md:px-16 bg-white"
+            className="py-28 md:py-40 px-8 md:px-20 bg-white"
         >
             <div className="max-w-7xl mx-auto">
                 <div

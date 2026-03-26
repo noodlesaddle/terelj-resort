@@ -30,7 +30,7 @@ export default function ContactCTA() {
         <section
             ref={sectionRef}
             id="contact"
-            className="relative py-32 md:py-40 px-8 md:px-16 bg-black text-white overflow-hidden"
+            className="relative py-32 md:py-48 px-8 md:px-20 bg-black text-white overflow-hidden"
         >
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />

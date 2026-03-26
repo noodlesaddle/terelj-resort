@@ -48,7 +48,7 @@ export default function FloorPlan() {
         <section
             ref={sectionRef}
             id="floorplan"
-            className="py-24 md:py-32 px-8 md:px-16 bg-gray-50"
+            className="py-28 md:py-40 px-8 md:px-20 bg-gray-50"
         >
             <div className="max-w-7xl mx-auto">
                 <h2

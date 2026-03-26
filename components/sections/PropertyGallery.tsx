@@ -2,64 +2,26 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const galleryItems = [
-    {
-        id: 1,
-        image: "/renders/3.jpg",
-        title: "Courtyard Sanctuary",
-        description: "A curved concrete wall frames the grassy courtyard,\nleading to a single-story pavilion and the main\nresidential building beyond.",
-    },
-    {
-        id: 2,
-        image: "/renders/4.jpg",
-        title: "Golden Hour Pavilion",
-        description: "A long timber and glass pavilion nestled into the grassy slope,\nbathed in the warm glow of late afternoon sun.",
-    },
-    {
-        id: 3,
-        image: "/renders/7.jpg",
-        title: "Forest Pool",
-        description: "A glass-walled building houses a blue-lit lap pool,\nreflecting the interior timber structure against\na backdrop of dense forest.",
-    },
-    {
-        id: 4,
-        image: "/renders/17.jpg",
-        title: "Light-Filled Gallery",
-        description: "Sun-drenched hallway with light wood floors\nand floor-to-ceiling glass walls opening\nto a forested courtyard.",
-    },
-    {
-        id: 5,
-        image: "/renders/11.jpg",
-        title: "Evening Terrace",
-        description: "An outdoor wooden deck with cafe seating at night,\nframed by building wings with warm light\nspilling from glass doors.",
-    },
-    {
-        id: 6,
-        image: "/renders/14.jpg",
-        title: "Seamless Connection",
-        description: "A minimalist glass-walled corridor connects\nthe white residential building to the wooden wing,\noverlooking a lush lawn.",
-    },
-    {
-        id: 7,
-        image: "/renders/6.jpg",
-        title: "Dusk Illumination",
-        description: "As evening falls, warm interior lights glow through windows\nwhile integrated landscape lighting\nilluminates the central courtyard.",
-    },
-    {
-        id: 8,
-        image: "/renders/5.jpg",
-        title: "Architectural Harmony",
-        description: "The U-shaped complex reveals its four-story white building\nwith balconies overlooking a central green courtyard\nwith young trees.",
-    },
+    { id: 1, image: "/renders/3.jpg", titleKey: "gallery.1.title", descKey: "gallery.1.desc" },
+    { id: 2, image: "/renders/4.jpg", titleKey: "gallery.2.title", descKey: "gallery.2.desc" },
+    { id: 3, image: "/renders/7.jpg", titleKey: "gallery.3.title", descKey: "gallery.3.desc" },
+    { id: 4, image: "/renders/17.jpg", titleKey: "gallery.4.title", descKey: "gallery.4.desc" },
+    { id: 5, image: "/renders/11.jpg", titleKey: "gallery.5.title", descKey: "gallery.5.desc" },
+    { id: 6, image: "/renders/14.jpg", titleKey: "gallery.6.title", descKey: "gallery.6.desc" },
+    { id: 7, image: "/renders/6.jpg", titleKey: "gallery.7.title", descKey: "gallery.7.desc" },
+    { id: 8, image: "/renders/5.jpg", titleKey: "gallery.8.title", descKey: "gallery.8.desc" },
 ];
 
 export default function PropertyGallery() {
     const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
-    const observerRef = useRef<IntersectionObserver | null>(null);
+    const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const { t } = useLanguage();
 
     useEffect(() => {
-        observerRef.current = new IntersectionObserver(
+        const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
@@ -68,51 +30,37 @@ export default function PropertyGallery() {
                     }
                 });
             },
-            { threshold: 0.2 }
+            { threshold: 0.05 }
         );
-
-        return () => observerRef.current?.disconnect();
-    }, []);
-
-    useEffect(() => {
-        const elements = document.querySelectorAll('[data-gallery-item]');
-        elements.forEach((el) => observerRef.current?.observe(el));
+        itemRefs.current.forEach((el) => { if (el) observer.observe(el); });
+        return () => observer.disconnect();
     }, []);
 
     return (
-        <section className="bg-white">
+        <section id="gallery" className="bg-white">
             {galleryItems.map((item, index) => (
                 <div
                     key={item.id}
-                    data-gallery-item
+                    ref={(el) => { itemRefs.current[index] = el; }}
                     data-id={item.id}
                     className="relative"
                 >
-                    {/* Full-screen image */}
-                    <div className="relative h-screen w-full">
+                    <div className="relative h-[70vw] min-h-[300px] md:h-screen w-full">
                         <Image
                             src={item.image}
-                            alt={item.title}
+                            alt={t(item.titleKey)}
                             fill
                             className="object-cover"
                             quality={90}
                         />
                     </div>
-
-                    {/* Text content */}
-                    <div className="px-8 md:px-16 py-16 md:py-24">
-                        <div
-                            className={`max-w-7xl mx-auto transition-all duration-1000 ${visibleItems.has(item.id)
-                                ? 'opacity-100 translate-y-0'
-                                : 'opacity-0 translate-y-12'
-                                } ${index % 2 === 0 ? '' : 'ml-auto text-right'}`}
-                            style={{ maxWidth: index % 2 === 0 ? '42rem' : '42rem' }}
-                        >
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 leading-tight tracking-tight">
-                                {item.title}
+                    <div className="px-8 md:px-20 py-20 md:py-32">
+                        <div className={`max-w-2xl transition-all duration-700 ${visibleItems.has(item.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} ${index % 2 === 0 ? '' : 'ml-auto text-right'}`}>
+                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8 leading-tight tracking-tight">
+                                {t(item.titleKey)}
                             </h2>
                             <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed whitespace-pre-line font-light">
-                                {item.description}
+                                {t(item.descKey)}
                             </p>
                         </div>
                     </div>

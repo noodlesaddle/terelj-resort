@@ -10,168 +10,76 @@ export default function WhyMongolia() {
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.3 }
+            ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+            { threshold: 0.1 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
+        if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
     }, []);
 
     const stats = [
-        {
-            number: "846K",
-            labelKey: "why.visitors",
-            sublabelKey: "why.visitorsSubtitle",
-        },
-        {
-            number: "$2.1B",
-            labelKey: "why.revenue",
-            sublabelKey: "why.revenueSubtitle",
-        },
-        {
-            number: "#1",
-            labelKey: "why.destination",
-            sublabelKey: "why.destinationSubtitle",
-        },
-        {
-            number: "60 min",
-            labelKey: "why.fromCapital",
-            sublabelKey: "why.fromCapitalSubtitle",
-        },
+        { number: "846K", labelKey: "why.visitors", sublabelKey: "why.visitorsSubtitle" },
+        { number: "$2.1B", labelKey: "why.revenue", sublabelKey: "why.revenueSubtitle" },
+        { number: "#1", labelKey: "why.destination", sublabelKey: "why.destinationSubtitle" },
+        { number: "60 min", labelKey: "why.fromCapital", sublabelKey: "why.fromCapitalSubtitle" },
     ];
 
-    const reasons = [
-        {
-            titleKey: "why.mongolia",
-            points: [
-                "Fastest growing tourism market in Asia",
-                "Government prioritizing tourism development",
-                "Untapped luxury hospitality market",
-                "Strategic location between China and Russia",
-                "Stable political environment",
-                "Growing middle class in neighboring countries",
-            ],
-        },
-        {
-            titleKey: "why.terelj",
-            points: [
-                "Mongolia's most visited national park",
-                "Year-round destination with diverse activities",
-                "Stunning natural landscapes and rock formations",
-                "Close proximity to Ulaanbaatar (1 hour drive)",
-                "Limited luxury accommodation options",
-                "Protected natural environment ensures exclusivity",
-            ],
-        },
-    ];
+    const mongoliaPoints = ["why.mongolia.1", "why.mongolia.2", "why.mongolia.3", "why.mongolia.4", "why.mongolia.5", "why.mongolia.6"];
+    const tereljPoints = ["why.terelj.1", "why.terelj.2", "why.terelj.3", "why.terelj.4", "why.terelj.5", "why.terelj.6"];
 
     return (
-        <section
-            ref={sectionRef}
-            className="relative py-32 md:py-40 px-8 md:px-16 bg-black text-white overflow-hidden"
-        >
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]" />
-            </div>
-
+        <section ref={sectionRef} className="relative py-32 md:py-48 px-8 md:px-20 bg-black text-white overflow-hidden">
             <div className="relative max-w-7xl mx-auto">
-                {/* Header */}
-                <div
-                    className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}
-                >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                        {t("why.title")}
-                    </h2>
-                    <p className="text-xl md:text-2xl font-light text-white/80 max-w-3xl mx-auto">
-                        {t("why.subtitle")}
-                    </p>
+                <div className={`text-center mb-24 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">{t("why.title")}</h2>
+                    <p className="text-xl md:text-2xl font-light text-white/80 max-w-3xl mx-auto">{t("why.subtitle")}</p>
                 </div>
 
-                {/* Statistics */}
-                <div
-                    className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}
-                    style={{ transitionDelay: '200ms' }}
-                >
+                <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 mb-32 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
                     {stats.map((stat, index) => (
-                        <div
-                            key={index}
-                            className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10"
-                        >
-                            <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                                {stat.number}
-                            </div>
-                            <div className="text-base md:text-lg font-light mb-1">
-                                {t(stat.labelKey)}
-                            </div>
-                            <div className="text-xs md:text-sm text-white/60 font-light">
-                                {t(stat.sublabelKey)}
-                            </div>
+                        <div key={index} className="text-center p-6 bg-white/5 rounded-lg border border-white/10">
+                            <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
+                            <div className="text-sm md:text-base font-light mb-1">{t(stat.labelKey)}</div>
+                            <div className="text-xs text-white/60 font-light">{t(stat.sublabelKey)}</div>
                         </div>
                     ))}
                 </div>
 
-                {/* Why Mongolia & Why Terelj */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
-                    {reasons.map((section, sectionIndex) => (
-                        <div
-                            key={sectionIndex}
-                            className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                                }`}
-                            style={{ transitionDelay: `${(sectionIndex + 4) * 150}ms` }}
-                        >
-                            <h3 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight">
-                                {t(section.titleKey)}
-                            </h3>
-                            <ul className="space-y-4">
-                                {section.points.map((point, pointIndex) => (
-                                    <li
-                                        key={pointIndex}
-                                        className="flex items-start text-lg font-light text-white/90"
-                                    >
-                                        <span className="inline-block w-2 h-2 bg-white rounded-full mr-4 mt-2 flex-shrink-0"></span>
-                                        <span>{point}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-24">
+                    <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '400ms' }}>
+                        <h3 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight">{t("why.mongolia")}</h3>
+                        <ul className="space-y-4">
+                            {mongoliaPoints.map((key, i) => (
+                                <li key={i} className="flex items-start text-lg font-light text-white/90">
+                                    <span className="inline-block w-2 h-2 bg-white rounded-full mr-4 mt-2 flex-shrink-0"></span>
+                                    <span>{t(key)}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '550ms' }}>
+                        <h3 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight">{t("why.terelj")}</h3>
+                        <ul className="space-y-4">
+                            {tereljPoints.map((key, i) => (
+                                <li key={i} className="flex items-start text-lg font-light text-white/90">
+                                    <span className="inline-block w-2 h-2 bg-white rounded-full mr-4 mt-2 flex-shrink-0"></span>
+                                    <span>{t(key)}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
 
-                {/* Market Insights */}
-                <div
-                    className={`mt-20 p-8 md:p-12 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}
-                    style={{ transitionDelay: '900ms' }}
-                >
-                    <h4 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">
-                        {t("why.insights")}
-                    </h4>
+                <div className={`p-8 md:p-12 bg-white/5 rounded-lg border border-white/10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '700ms' }}>
+                    <h4 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">{t("why.insights")}</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base md:text-lg font-light text-white/80">
                         <div>
-                            <p className="mb-4">
-                                <strong className="text-white font-normal">Tourism Growth:</strong> Mongolia's tourism sector has seen exceptional growth, with international arrivals reaching 846,103 in 2025, representing a 46% year-over-year increase.
-                            </p>
-                            <p>
-                                <strong className="text-white font-normal">Luxury Gap:</strong> Despite growing demand, there is a significant shortage of high-end accommodation options outside Ulaanbaatar.
-                            </p>
+                            <p className="mb-4"><strong className="text-white font-normal">{t("why.insights.growth.label")}</strong> {t("why.insights.growth.text")}</p>
+                            <p><strong className="text-white font-normal">{t("why.insights.luxury.label")}</strong> {t("why.insights.luxury.text")}</p>
                         </div>
                         <div>
-                            <p className="mb-4">
-                                <strong className="text-white font-normal">Regional Demand:</strong> Growing affluent populations in China, South Korea, and Japan seeking unique nature-based experiences.
-                            </p>
-                            <p>
-                                <strong className="text-white font-normal">Government Support:</strong> Tourism identified as key economic diversification strategy with infrastructure investments planned.
-                            </p>
+                            <p className="mb-4"><strong className="text-white font-normal">{t("why.insights.demand.label")}</strong> {t("why.insights.demand.text")}</p>
+                            <p><strong className="text-white font-normal">{t("why.insights.gov.label")}</strong> {t("why.insights.gov.text")}</p>
                         </div>
                     </div>
                 </div>
