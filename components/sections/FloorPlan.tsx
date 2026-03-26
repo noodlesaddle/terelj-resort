@@ -26,14 +26,20 @@ export default function FloorPlan() {
                     setIsVisible(true);
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.05 }
         );
 
         if (sectionRef.current) {
             observer.observe(sectionRef.current);
         }
 
-        return () => observer.disconnect();
+        // Fallback: if IntersectionObserver never fires (e.g. already in view), show after mount
+        const timeout = setTimeout(() => setIsVisible(true), 300);
+
+        return () => {
+            observer.disconnect();
+            clearTimeout(timeout);
+        };
     }, []);
 
     useEffect(() => {

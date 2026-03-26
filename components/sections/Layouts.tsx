@@ -43,19 +43,12 @@ export default function Layouts() {
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.2 }
+            ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+            { threshold: 0.05 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
+        if (sectionRef.current) observer.observe(sectionRef.current);
+        const timeout = setTimeout(() => setIsVisible(true), 300);
+        return () => { observer.disconnect(); clearTimeout(timeout); };
     }, []);
 
     useEffect(() => {

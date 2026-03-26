@@ -14,7 +14,8 @@ export default function WhyMongolia() {
             { threshold: 0.1 }
         );
         if (sectionRef.current) observer.observe(sectionRef.current);
-        return () => observer.disconnect();
+        const timeout = setTimeout(() => setIsVisible(true), 300);
+        return () => { observer.disconnect(); clearTimeout(timeout); };
     }, []);
 
     const stats = [
