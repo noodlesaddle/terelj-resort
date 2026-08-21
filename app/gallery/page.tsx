@@ -64,13 +64,23 @@ export default function GalleryPage() {
             <nav className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
                 <div className="max-w-7xl mx-auto px-8 md:px-16 py-6 md:py-8 flex justify-between items-center">
                     <Link href="/" className="text-lg md:text-xl font-light tracking-widest text-black hover:opacity-70 transition-opacity">
-                        {language === "ja" ? "テレルジリゾート" : "TERELJ RESORT"}
+                        {language === "ja" ? "テレルジリゾート" : language === "zh" ? "特勒勒吉度假村" : "TERELJ RESORT"}
                     </Link>
                     <div className="flex items-center gap-6">
                         <div className="flex gap-2 items-center">
-                            <button onClick={() => setLanguage("en")} className={`text-sm font-light transition-all ${language === "en" ? "text-black" : "text-gray-400"}`}>EN</button>
-                            <span className="text-gray-300">|</span>
-                            <button onClick={() => setLanguage("ja")} className={`text-sm font-light transition-all ${language === "ja" ? "text-black" : "text-gray-400"}`}>日本語</button>
+                            {(["en", "ja", "zh"] as const).map((lang, i, arr) => (
+                                <span key={lang} className="flex items-center gap-2">
+                                    <button
+                                        onClick={() => setLanguage(lang)}
+                                        className={`text-sm font-light transition-all ${language === lang ? "text-black" : "text-gray-400"}`}
+                                    >
+                                        {lang === "en" ? "EN" : lang === "ja" ? "日本語" : "简体"}
+                                    </button>
+                                    {i < arr.length - 1 && (
+                                        <span className="text-gray-300">|</span>
+                                    )}
+                                </span>
+                            ))}
                         </div>
                         <Link href="/" className="text-sm font-light hover:opacity-70 transition-opacity text-black">
                             {t("gpage.back")}

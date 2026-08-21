@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
-type Language = "en" | "ja";
+type Language = "en" | "ja" | "zh";
 
 interface LanguageContextType {
     language: Language;
@@ -371,6 +371,185 @@ const translations = {
         "contact.phone": "電話",
         "contact.location": "所在地",
     },
+    zh: {
+        // Navigation
+        "nav.gallery": "图库",
+        "nav.floorPlans": "平面图",
+        "nav.specs": "规格",
+        "nav.investment": "投资信息",
+        "nav.location": "交通",
+        "nav.contact": "联系我们",
+
+        // Hero
+        "hero.title": "特勒勒吉度假村",
+        "hero.subtitle": "蒙古国特勒勒吉国家公园",
+
+        // Dark Intro
+        "intro.title": "逃离\n酷暑",
+        "intro.subtitle": "在蒙古国凉爽宜人的夏日，保持工作与生活的平衡。\n度假与高效工作的完美融合。",
+        "intro.climate.title": "夏季气候",
+        "intro.climate.desc": "当城市酷热难耐（35-40°C）时，特勒勒吉提供舒适的20-25°C气温。凉爽的山地空气、湛蓝的天空和原始自然构成完美的避暑胜地。",
+        "intro.work.title": "工作与健康",
+        "intro.work.desc": "高速网络、现代化工作空间和健康设施，让您在享受水疗、温泉浴和自然散步的同时保持高效工作。",
+        "intro.footer": "5公顷原始景观 • 配备现代设施的私人别墅 • 餐厅、水疗、温泉及健康中心 • 距乌兰巴托60分钟",
+
+        // Floor Plans
+        "floorplan.title": "平面图",
+        "floorplan.hotel1": "酒店布局 1",
+        "floorplan.hotel2": "酒店布局 2",
+        "floorplan.service1": "服务区域 1",
+        "floorplan.service2": "服务区域 2",
+        "floorplan.service3": "服务区域 3",
+        "floorplan.service4": "服务区域 4",
+        "floorplan.clickToView": "点击查看大图",
+
+        // Specs
+        "specs.title": "项目规格",
+        "specs.name": "名称",
+        "specs.nameValue": "特勒勒吉度假村",
+        "specs.landArea": "总占地面积",
+        "specs.landAreaValue": "5公顷",
+        "specs.location": "位置",
+        "specs.locationValue": "蒙古国特勒勒吉国家公园",
+        "specs.houseOptions": "私人住宅方案",
+        "specs.bedrooms2": "两居室",
+        "specs.bedroom1": "一居室",
+        "specs.studio": "开间",
+        "specs.people45": "4-5人",
+        "specs.people23": "2-3人",
+        "specs.people2": "2人",
+        "specs.facilities": "度假村设施",
+        "specs.restaurant": "餐厅",
+        "specs.eventHall": "活动大厅",
+        "specs.hotel": "酒店",
+        "specs.spa": "水疗",
+        "specs.pilates": "普拉提工作室",
+        "specs.onsen": "温泉",
+        "specs.wellness": "健康服务",
+
+        // Why Mongolia
+        "why.title": "投资机遇",
+        "why.subtitle": "蒙古国旅游业正经历前所未有的增长",
+        "why.visitors": "境外游客人数",
+        "why.visitorsSubtitle": "2025年，同比增长46%",
+        "why.revenue": "旅游收入",
+        "why.revenueSubtitle": "快速增长的经济板块",
+        "why.destination": "旅游目的地",
+        "why.destinationSubtitle": "特勒勒吉国家公园",
+        "why.fromCapital": "距首都距离",
+        "why.fromCapitalSubtitle": "交通便利",
+        "why.mongolia": "为什么选择蒙古国？",
+        "why.mongolia.1": "亚洲增长最快的旅游市场",
+        "why.mongolia.2": "政府将旅游业列为发展优先",
+        "why.mongolia.3": "尚未开发的高端酒店市场",
+        "why.mongolia.4": "中俄之间的战略地理位置",
+        "why.mongolia.5": "稳定的政治环境",
+        "why.mongolia.6": "周边国家中产阶层持续壮大",
+        "why.terelj": "为什么选择特勒勒吉国家公园？",
+        "why.terelj.1": "蒙古国访客最多的国家公园",
+        "why.terelj.2": "四季皆宜的多元化旅游目的地",
+        "why.terelj.3": "壮美的自然风光与岩石地貌",
+        "why.terelj.4": "距乌兰巴托仅1小时车程",
+        "why.terelj.5": "高端住宿设施严重匮乏",
+        "why.terelj.6": "自然保护区赋予项目稀缺性",
+        "why.insights": "市场洞察",
+        "why.insights.growth.label": "旅游增长：",
+        "why.insights.growth.text": "蒙古国旅游业实现强劲增长，2025年境外游客人数达846,103人，同比增长46%。",
+        "why.insights.luxury.label": "高端市场缺口：",
+        "why.insights.luxury.text": "尽管需求持续增长，乌兰巴托以外的高端住宿仍严重不足。",
+        "why.insights.demand.label": "区域需求：",
+        "why.insights.demand.text": "中国、韩国、日本的富裕人群正寻求独特的自然体验式旅行。",
+        "why.insights.gov.label": "政府支持：",
+        "why.insights.gov.text": "旅游业被确立为经济多元化的核心战略，基础设施投资计划已在推进中。",
+
+        // Investment
+        "invest.title": "投资机会",
+        "invest.subtitle": "共同参与蒙古国顶级豪华度假村的开发建设",
+        "invest.primeLocation": "黄金地段",
+        "invest.primeLocation.desc": "坐落于蒙古国顶级旅游胜地特勒勒吉国家公园，距首都仅60分钟车程。",
+        "invest.growingTourism": "旅游业强势增长",
+        "invest.growingTourism.desc": "蒙古国旅游业快速扩张，境外游客数量逐年攀升。",
+        "invest.uniqueOffering": "独一无二的项目",
+        "invest.uniqueOffering.desc": "该地区首个高端度假村，将传统待客之道与世界级设施完美融合。",
+        "invest.multipleRevenue": "多元化收益来源",
+        "invest.multipleRevenue.desc": "酒店、餐厅、水疗、活动大厅及健康服务构成多元化收益体系。",
+        "invest.development": "5公顷开发项目",
+        "invest.development.desc": "广阔用地为未来扩展与开发预留充裕空间。",
+        "invest.yearRound": "全年运营",
+        "invest.yearRound.desc": "四季皆有活动与旅游资源，实现全年稳定运营。",
+        "invest.hectares": "公顷",
+        "invest.houseOptions": "住宅方案",
+        "invest.facilities": "配套设施",
+        "invest.minFromCity": "分钟（距市区）",
+
+        // Location
+        "location.title": "交通",
+        "location.address": "蒙古国特勒勒吉国家公园",
+        "location.byCar": "自驾",
+        "location.byCar.desc": "距成吉思汗国际机场约60分钟车程",
+        "location.byHelicopter": "直升机",
+        "location.byHelicopter.desc": "从成吉思汗机场直升机停机坪直接接送",
+        "location.60minutes": "60分钟",
+        "location.20minutes": "20分钟",
+        "location.googleMaps": "在谷歌地图中打开",
+
+        // Gallery Page
+        "gpage.title": "图库",
+        "gpage.subtitle": "探索特勒勒吉度假村的完整视觉故事",
+        "gpage.back": "返回首页",
+        "gcat.all": "全部",
+        "gcat.aerial": "航拍",
+        "gcat.exterior": "外观",
+        "gcat.interior": "内部",
+        "gcat.detail": "细节",
+        "gcat.model": "模型",
+        "gpage.1": "西南航拍视角",
+        "gpage.2": "日间俯瞰图",
+        "gpage.3": "黄昏夜景",
+        "gpage.4": "等轴测模型",
+        "gpage.5": "场地环境",
+        "gpage.6": "俯视平面图",
+        "gpage.7": "庭院人视角",
+        "gpage.8": "日落凉亭",
+        "gpage.9": "夜间露台",
+        "gpage.10": "入口广场",
+        "gpage.11": "到达环路",
+        "gpage.12": "室内泳池",
+        "gpage.13": "玻璃廊道",
+        "gpage.14": "混凝土曲线",
+        "gpage.15": "韵律翼楼",
+        "gpage.16": "室内画廊",
+        "gpage.17": "远景体量",
+        "gpage.18": "剖面图",
+        "gpage.19": "走廊",
+
+        // Gallery cards
+        "gallery.1.title": "庭院圣所",
+        "gallery.1.desc": "弧形混凝土墙围合草坪庭院，\n引向单层凉亭与\n远处的主楼。",
+        "gallery.2.title": "黄金时刻凉亭",
+        "gallery.2.desc": "木材与玻璃构成的长廊\n依山而建，沐浴在午后温暖的阳光中。",
+        "gallery.3.title": "林中泳池",
+        "gallery.3.desc": "玻璃幕墙建筑内藏蓝光泳道，\n木结构倒映在\n茂密森林背景之上。",
+        "gallery.4.title": "光影长廊",
+        "gallery.4.desc": "阳光充沛的走廊铺设浅木地板，\n落地玻璃墙向\n林间庭院开敞。",
+        "gallery.5.title": "夜间露台",
+        "gallery.5.desc": "夜晚的木质露台咖啡座，\n建筑两翼温暖的灯光\n从玻璃门中溢出。",
+        "gallery.6.title": "无缝连接",
+        "gallery.6.desc": "极简玻璃廊道连接\n白色居住楼与木质翼楼，\n俯瞰翠绿草坪。",
+        "gallery.7.title": "黄昏夜景",
+        "gallery.7.desc": "夜幕降临，温暖的室内灯光\n透过窗户投射而出，\n景观灯照亮中央庭院。",
+        "gallery.8.title": "建筑和谐",
+        "gallery.8.desc": "U形综合体揭示四层白色大楼，\n阳台俯瞰种有小树的\n绿色中央庭院。",
+
+        // Contact
+        "contact.title": "准备好投资\n蒙古国的未来了吗？",
+        "contact.subtitle": "共同打造融合奢华、自然与可持续发展的卓越目的地。",
+        "contact.requestDeck": "索取投资材料",
+        "contact.scheduleCall": "预约通话",
+        "contact.email": "邮箱",
+        "contact.phone": "电话",
+        "contact.location": "地址",
+    },
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -378,7 +557,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         const stored = localStorage.getItem("lang") as Language;
-        if (stored === "en" || stored === "ja") {
+        if (stored === "en" || stored === "ja" || stored === "zh") {
             setLanguageState(stored);
         }
     }, []);
@@ -389,7 +568,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     };
 
     const t = (key: string): string => {
-        return translations[language][key as keyof typeof translations.en] || key;
+        const langDict = translations[language] as Record<string, string>;
+        return langDict[key] ?? (translations.en as Record<string, string>)[key] ?? key;
     };
 
     return (

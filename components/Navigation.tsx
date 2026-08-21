@@ -71,26 +71,23 @@ export default function Navigation() {
                     </a>
 
                     {/* Language Switcher */}
-                    <div className="flex gap-2 ml-2">
-                        <button
-                            onClick={() => setLanguage("en")}
-                            className={`text-sm font-light tracking-wide transition-all duration-300 ${language === "en"
-                                ? scrolled ? "text-black font-normal" : "text-white font-normal"
-                                : scrolled ? "text-black/50 hover:text-black" : "text-white/50 hover:text-white"
-                                }`}
-                        >
-                            EN
-                        </button>
-                        <span className={scrolled ? "text-black/30" : "text-white/30"}>|</span>
-                        <button
-                            onClick={() => setLanguage("ja")}
-                            className={`text-sm font-light tracking-wide transition-all duration-300 ${language === "ja"
-                                ? scrolled ? "text-black font-normal" : "text-white font-normal"
-                                : scrolled ? "text-black/50 hover:text-black" : "text-white/50 hover:text-white"
-                                }`}
-                        >
-                            日本語
-                        </button>
+                    <div className="flex gap-2 ml-2 items-center">
+                        {(["en", "ja", "zh"] as const).map((lang, i, arr) => (
+                            <span key={lang} className="flex items-center gap-2">
+                                <button
+                                    onClick={() => setLanguage(lang)}
+                                    className={`text-sm font-light tracking-wide transition-all duration-300 ${language === lang
+                                        ? scrolled ? "text-black font-normal" : "text-white font-normal"
+                                        : scrolled ? "text-black/50 hover:text-black" : "text-white/50 hover:text-white"
+                                        }`}
+                                >
+                                    {lang === "en" ? "EN" : lang === "ja" ? "日本語" : "简体"}
+                                </button>
+                                {i < arr.length - 1 && (
+                                    <span className={scrolled ? "text-black/30" : "text-white/30"}>|</span>
+                                )}
+                            </span>
+                        ))}
                     </div>
 
 
@@ -98,18 +95,27 @@ export default function Navigation() {
 
                 {/* Mobile Menu */}
                 <div className="lg:hidden flex gap-3 items-center">
-                    <button
-                        onClick={() => setLanguage(language === "en" ? "ja" : "en")}
-                        className={`text-xs font-light tracking-wide transition-colors duration-300 ${scrolled ? "text-black" : "text-white"
-                            }`}
-                    >
-                        {language === "en" ? "日本語" : "EN"}
-                    </button>
+                    <div className="flex gap-1 items-center">
+                        {(["en", "ja", "zh"] as const).map((lang, i, arr) => (
+                            <span key={lang} className="flex items-center gap-1">
+                                <button
+                                    onClick={() => setLanguage(lang)}
+                                    className={`text-xs font-light tracking-wide transition-colors duration-300 ${language === lang
+                                        ? scrolled ? "text-black" : "text-white"
+                                        : scrolled ? "text-black/40" : "text-white/40"
+                                        }`}
+                                >
+                                    {lang === "en" ? "EN" : lang === "ja" ? "日本語" : "简体"}
+                                </button>
+                                {i < arr.length - 1 && (
+                                    <span className={`text-xs ${scrolled ? "text-black/20" : "text-white/20"}`}>|</span>
+                                )}
+                            </span>
+                        ))}
+                    </div>
                     <a
                         href="#contact"
-                        className={`px-4 py-2 text-xs font-light tracking-wide transition-all duration-300 ${scrolled
-                            ? "bg-black text-white"
-                            : "bg-white text-black"
+                        className={`px-4 py-2 text-xs font-light tracking-wide transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-white text-black"
                             }`}
                     >
                         {t("nav.contact")}
