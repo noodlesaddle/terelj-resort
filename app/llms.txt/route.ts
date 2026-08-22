@@ -21,7 +21,7 @@ const content = `# Terelj Resort — Comprehensive AI Index
 - Country: Mongolia (MN)
 - Region: Töv Province
 - Park: Gorkhi-Terelj National Park
-- Coordinates: 47.8535°N, 107.4512°E
+- Coordinates: 47.879850°N, 107.405738°E
 - Distance to capital: 60 min by car, 20 min by helicopter from Chinggis Khaan International Airport, Ulaanbaatar
 
 ## Project Specifications

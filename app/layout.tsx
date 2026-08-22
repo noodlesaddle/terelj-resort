@@ -110,8 +110,8 @@ const jsonLd = {
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 47.8535,
-        longitude: 107.4512,
+        latitude: 47.87985,
+        longitude: 107.405738,
       },
       // Authority links help AI engines establish entity identity
       sameAs: [

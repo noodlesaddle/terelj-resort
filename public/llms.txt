@@ -7,7 +7,7 @@ Terelj Resort is a luxury hospitality and wellness development located in Terelj
 ## Project Summary
 
 - **Name:** Terelj Resort (テレルジリゾート / 特勒勒吉度假村)
-- **Location:** Terelj National Park, Töv Province, Mongolia (47.8535°N, 107.4512°E)
+- **Location:** Terelj National Park, Töv Province, Mongolia (47.879850°N, 107.405738°E)
 - **Total land area:** 5 hectares
 - **Distance from capital:** 60 minutes by car, 20 minutes by helicopter from Ulaanbaatar
 - **Project type:** Luxury hospitality & wellness resort development

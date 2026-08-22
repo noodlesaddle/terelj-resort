@@ -44,7 +44,7 @@ export default function Location() {
                         {/* Map */}
                         <div className="relative w-full h-[400px] md:h-[500px] bg-gray-50 rounded-lg overflow-hidden">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10659.387156493827!2d107.45670000000001!3d47.983300000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96925d0b0b0b0b%3A0x0!2zNDfCsDU5JzAwLjAiTiAxMDfCsDI3JzI0LjEiRQ!5e0!3m2!1sen!2smn!4v1234567890&style=feature:all|element:geometry|color:0xf5f5f5&style=feature:all|element:labels.text.fill|color:0x616161&style=feature:all|element:labels.text.stroke|color:0xf5f5f5&style=feature:water|element:geometry|color:0xe0e0e0"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2662.3!2d107.405738!3d47.879850!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDUyJzQ3LjUiTiAxMDfCsDI0JzIwLjciRQ!5e0!3m2!1sen!2smn!4v1700000000000"
                                 width="100%"
                                 height="100%"
                                 style={{
@@ -88,7 +88,7 @@ export default function Location() {
                             {/* Google Maps Link */}
                             <div className="pt-8 border-t border-gray-200">
                                 <a
-                                    href="https://maps.app.goo.gl/aE5qNTZe5pH6b9Jd6"
+                                    href="https://maps.app.goo.gl/zqn24hg8jnjqWhx47"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-xs md:text-sm text-gray-400 hover:text-black transition-colors duration-300 font-light flex items-center gap-2"
