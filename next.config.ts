@@ -31,6 +31,8 @@ const securityHeaders = [
       "font-src 'self'",
       // Connects: Next.js HMR in dev + Vercel analytics
       "connect-src 'self' https://vitals.vercel-insights.com",
+      // Allow Google Maps embeds
+      "frame-src 'self' https://www.google.com https://maps.google.com",
       "frame-ancestors 'self'",
       "base-uri 'self'",
       "form-action 'self'",

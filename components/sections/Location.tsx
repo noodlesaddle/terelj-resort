@@ -65,10 +65,10 @@ export default function Location() {
                                     {t("location.byCar")}
                                 </h3>
                                 <p className="text-sm md:text-base text-gray-500 font-light leading-relaxed mb-3">
-                                    Approximately 60 {t("location.minutes")} from Chinggis Khaan International Airport
+                                    {t("location.byCar.desc")}
                                 </p>
                                 <p className="text-2xl md:text-3xl font-light">
-                                    60 {t("location.minutes")}
+                                    {t("location.60minutes")}
                                 </p>
                             </div>
 
@@ -78,10 +78,10 @@ export default function Location() {
                                     {t("location.byHelicopter")}
                                 </h3>
                                 <p className="text-sm md:text-base text-gray-500 font-light leading-relaxed mb-3">
-                                    Direct transfer from Chinggis Khaan Airport heliport on site
+                                    {t("location.byHelicopter.desc")}
                                 </p>
                                 <p className="text-2xl md:text-3xl font-light">
-                                    20 {t("location.minutes")}
+                                    {t("location.20minutes")}
                                 </p>
                             </div>
 
@@ -93,7 +93,7 @@ export default function Location() {
                                     rel="noopener noreferrer"
                                     className="text-xs md:text-sm text-gray-400 hover:text-black transition-colors duration-300 font-light flex items-center gap-2"
                                 >
-                                    <span>Google map で見る</span>
+                                    <span>{t("location.googleMaps")}</span>
                                     <svg
                                         className="w-3 h-3"
                                         fill="none"
