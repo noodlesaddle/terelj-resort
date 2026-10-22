@@ -164,6 +164,10 @@ const translations = {
         "gpage.17": "Distant Massing",
         "gpage.18": "Cross-Section",
         "gpage.19": "Corridor",
+        "gpage.20": "Modern Villa Approach",
+        "gpage.21": "Architectural Courtyard",
+        "gpage.22": "Contemporary Residence",
+        "gpage.23": "Villa Exterior",
 
         // Contact
         "gallery.1.title": "Courtyard Sanctuary",
@@ -182,6 +186,10 @@ const translations = {
         "gallery.7.desc": "As evening falls, warm interior lights glow through windows\nwhile integrated landscape lighting\nilluminates the central courtyard.",
         "gallery.8.title": "Architectural Harmony",
         "gallery.8.desc": "The U-shaped complex reveals its four-story white building\nwith balconies overlooking a central green courtyard\nwith young trees.",
+        "gallery.9.title": "Modern Villa Entrance",
+        "gallery.9.desc": "A contemporary villa with clean architectural lines,\nfeaturing a sleek glass entrance and minimalist design\nset against lush green surroundings.",
+        "gallery.10.title": "Contemporary Residence",
+        "gallery.10.desc": "A modern house design with geometric windows\nand elegant facade, showcasing architectural precision\nin a natural landscape setting.",
 
         // Contact
         "contact.title": "Ready to Invest in\nMongolia's Future?",
@@ -343,6 +351,10 @@ const translations = {
         "gpage.17": "遠景マッシング",
         "gpage.18": "断面図",
         "gpage.19": "コリドー",
+        "gpage.20": "モダン別荘アプローチ",
+        "gpage.21": "建築的中庭",
+        "gpage.22": "コンテンポラリーな住居",
+        "gpage.23": "別荘外観",
 
         // Contact
         "gallery.1.title": "中庭の聖域",
@@ -361,6 +373,10 @@ const translations = {
         "gallery.7.desc": "夕暮れ時、窓から温かな室内の光が輝き、\n統合された景観照明が\n中央の中庭を照らし出す。",
         "gallery.8.title": "建築の調和",
         "gallery.8.desc": "U字型の複合施設、若木が植えられた\n緑の中庭を見下ろす\nバルコニーを持つ4階建ての白い建物。",
+        "gallery.9.title": "モダン別荘の入口",
+        "gallery.9.desc": "クリーンな建築ラインを持つコンテンポラリーな別荘、\n洗練されたガラスの入口とミニマリストなデザイン、\n緑豊かな環境に調和。",
+        "gallery.10.title": "コンテンポラリーな住居",
+        "gallery.10.desc": "幾何学的な窓とエレガントなファサードを持つ\nモダンハウスデザイン、自然の景観の中での\n建築的精密さを表現。",
 
         // Contact
         "contact.title": "モンゴルの未来への\n投資準備はできていますか？",
@@ -522,6 +538,10 @@ const translations = {
         "gpage.17": "远景体量",
         "gpage.18": "剖面图",
         "gpage.19": "走廊",
+        "gpage.20": "现代别墅入口",
+        "gpage.21": "建筑庭院",
+        "gpage.22": "当代住宅",
+        "gpage.23": "别墅外观",
 
         // Gallery cards
         "gallery.1.title": "庭院圣所",
@@ -540,6 +560,10 @@ const translations = {
         "gallery.7.desc": "夜幕降临，温暖的室内灯光\n透过窗户投射而出，\n景观灯照亮中央庭院。",
         "gallery.8.title": "建筑和谐",
         "gallery.8.desc": "U形综合体揭示四层白色大楼，\n阳台俯瞰种有小树的\n绿色中央庭院。",
+        "gallery.9.title": "现代别墅入口",
+        "gallery.9.desc": "拥有简洁建筑线条的当代别墅，\n采用光滑玻璃入口和极简设计，\n与郁郁葱葱的环境相映衬。",
+        "gallery.10.title": "当代住宅",
+        "gallery.10.desc": "具有几何窗户和优雅立面的现代房屋设计，\n在自然景观环境中展现建筑精度。",
 
         // Contact
         "contact.title": "准备好投资\n蒙古国的未来了吗？",

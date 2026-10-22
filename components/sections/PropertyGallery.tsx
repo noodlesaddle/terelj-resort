@@ -11,8 +11,10 @@ const galleryItems = [
     { id: 4, image: "/renders/17.jpg", titleKey: "gallery.4.title", descKey: "gallery.4.desc" },
     { id: 5, image: "/renders/11.jpg", titleKey: "gallery.5.title", descKey: "gallery.5.desc" },
     { id: 6, image: "/renders/14.jpg", titleKey: "gallery.6.title", descKey: "gallery.6.desc" },
-    { id: 7, image: "/renders/6.jpg", titleKey: "gallery.7.title", descKey: "gallery.7.desc" },
-    { id: 8, image: "/renders/5.jpg", titleKey: "gallery.8.title", descKey: "gallery.8.desc" },
+    { id: 7, image: "/renders/IMG_2913.JPG", titleKey: "gallery.9.title", descKey: "gallery.9.desc" },
+    { id: 8, image: "/renders/IMG_2915.JPG", titleKey: "gallery.10.title", descKey: "gallery.10.desc" },
+    { id: 9, image: "/renders/6.jpg", titleKey: "gallery.7.title", descKey: "gallery.7.desc" },
+    { id: 10, image: "/renders/5.jpg", titleKey: "gallery.8.title", descKey: "gallery.8.desc" },
 ];
 
 export default function PropertyGallery() {
