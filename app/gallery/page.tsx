@@ -67,8 +67,8 @@ export default function GalleryPage() {
         <main className="min-h-screen bg-white">
             <nav className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-6 md:py-8 flex justify-between items-center gap-4">
-                    <Link href="/" className="text-sm leading-snug tracking-wider sm:whitespace-nowrap sm:text-lg sm:tracking-widest md:text-xl font-light text-black hover:opacity-70 transition-opacity">
-                        {t("nav.brand")}
+                    <Link href="/" aria-label={t("nav.brand")} title={t("nav.brand")} className="whitespace-nowrap text-lg md:text-xl font-extrabold tracking-widest text-black hover:opacity-70 transition-opacity">
+                        TWR
                     </Link>
                     <div className="flex flex-shrink-0 items-center gap-6">
                         <div className="flex gap-2 items-center">

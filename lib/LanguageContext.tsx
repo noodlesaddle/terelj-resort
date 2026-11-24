@@ -34,8 +34,9 @@ const translations = {
         "nav.contact": "Contact Us",
 
         // Hero
-        "hero.title": "TERELJ WELLNESS RESORT",
-        "hero.subtitle": "A villa-led mountain wellness retreat in Gorkhi-Terelj National Park, about two hours from Ulaanbaatar",
+        "hero.eyebrow": "Gorkhi-Terelj National Park · Mongolia",
+        "hero.title": "Terelj Wellness Resort",
+        "hero.subtitle": "A villa-led mountain wellness retreat, two hours from Ulaanbaatar.",
 
         // Design-stage note
         "gallery.note": "All images are design-stage visualisations and may change through detailed design.",
@@ -308,8 +309,9 @@ const translations = {
         "nav.contact": "お問い合わせ",
 
         // Hero
+        "hero.eyebrow": "モンゴル · ゴルヒ・テレルジ国立公園",
         "hero.title": "テレルジ・ウェルネスリゾート",
-        "hero.subtitle": "ゴルヒ・テレルジ国立公園に佇む、ヴィラ中心の山岳ウェルネスリトリート。ウランバートルから約2時間",
+        "hero.subtitle": "ウランバートルから2時間、ヴィラ中心の山岳ウェルネスリトリート。",
 
         // Design-stage note
         "gallery.note": "掲載画像はすべて設計段階のイメージであり、詳細設計により変更される場合があります。",
@@ -582,8 +584,9 @@ const translations = {
         "nav.contact": "联系我们",
 
         // Hero
+        "hero.eyebrow": "蒙古国 · 戈尔希-特勒吉国家公园",
         "hero.title": "特勒吉康养度假村",
-        "hero.subtitle": "位于戈尔希-特勒吉国家公园、以别墅为核心的山地康养度假村，距乌兰巴托约两小时车程",
+        "hero.subtitle": "以别墅为核心的山地康养胜地，距乌兰巴托两小时车程。",
 
         // Design-stage note
         "gallery.note": "所有图片均为设计阶段效果图，可能随深化设计而调整。",

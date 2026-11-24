@@ -31,7 +31,10 @@ export default function PropertyHero() {
 
             <div className={`absolute bottom-0 left-0 right-0 px-8 md:px-16 pb-16 md:pb-24 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}>
-                <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-6">
+                <p className="text-white/80 text-xs md:text-sm uppercase tracking-[0.15em] md:tracking-[0.3em] font-light mb-4 md:mb-6">
+                    {t("hero.eyebrow")}
+                </p>
+                <h1 className="text-white text-[1.75rem] sm:text-5xl md:text-6xl lg:text-[5.5rem] font-bold tracking-tight leading-tight mb-4 md:mb-6">
                     {t("hero.title")}
                 </h1>
                 <p className="text-white/90 text-lg md:text-xl lg:text-2xl font-light tracking-wide">

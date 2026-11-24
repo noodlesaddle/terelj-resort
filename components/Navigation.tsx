@@ -27,10 +27,12 @@ export default function Navigation() {
             <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-6 md:py-8 flex justify-between items-center gap-4">
                 <a
                     href="#"
-                    className={`text-sm leading-snug tracking-wider sm:whitespace-nowrap sm:text-lg sm:tracking-widest md:text-xl font-light transition-colors duration-300 ${scrolled ? "text-black" : "text-white"
+                    aria-label={t("nav.brand")}
+                    title={t("nav.brand")}
+                    className={`whitespace-nowrap text-lg md:text-xl font-extrabold tracking-widest transition-colors duration-300 ${scrolled ? "text-black" : "text-white"
                         }`}
                 >
-                    {t("nav.brand")}
+                    TWR
                 </a>
 
                 <div className="hidden xl:flex gap-8 items-center">
