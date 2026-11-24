@@ -78,6 +78,7 @@ export default function FloorPlan() {
                                     src={plan.image}
                                     alt={t(plan.titleKey)}
                                     fill
+                                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                                     className="object-contain p-6 md:p-8 transition-transform duration-500 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
@@ -88,6 +89,9 @@ export default function FloorPlan() {
                         </div>
                     ))}
                 </div>
+                <p className="mt-16 text-sm text-gray-500 font-light text-center max-w-3xl mx-auto">
+                    {t("floorplan.note")}
+                </p>
             </div>
 
             {/* Modal */}
@@ -108,6 +112,7 @@ export default function FloorPlan() {
                             src={floorPlans.find(p => p.id === selectedPlan)?.image || ""}
                             alt={t(floorPlans.find(p => p.id === selectedPlan)?.titleKey || "")}
                             fill
+                            sizes="100vw"
                             className="object-contain"
                             quality={100}
                         />

@@ -24,47 +24,61 @@ export default function Navigation() {
                 : "bg-transparent"
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-8 md:px-16 py-6 md:py-8 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-6 md:py-8 flex justify-between items-center gap-4">
                 <a
                     href="#"
-                    className={`text-lg md:text-xl font-light tracking-widest transition-colors duration-300 ${scrolled ? "text-black" : "text-white"
+                    className={`text-sm leading-snug tracking-wider sm:whitespace-nowrap sm:text-lg sm:tracking-widest md:text-xl font-light transition-colors duration-300 ${scrolled ? "text-black" : "text-white"
                         }`}
                 >
-                    TERELJ RESORT
+                    {t("nav.brand")}
                 </a>
 
-                <div className="hidden lg:flex gap-8 items-center">
+                <div className="hidden xl:flex gap-8 items-center">
                     <Link
                         href="/gallery"
-                        className={`text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
+                        className={`whitespace-nowrap text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
                             }`}
                     >
                         {t("nav.gallery")}
                     </Link>
                     <a
                         href="#floorplan"
-                        className={`text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
+                        className={`whitespace-nowrap text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
                             }`}
                     >
                         {t("nav.floorPlans")}
                     </a>
                     <a
                         href="#specs"
-                        className={`text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
+                        className={`whitespace-nowrap text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
                             }`}
                     >
                         {t("nav.specs")}
                     </a>
                     <a
+                        href="#wellness"
+                        className={`whitespace-nowrap text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
+                            }`}
+                    >
+                        {t("nav.wellness")}
+                    </a>
+                    <a
+                        href="#market"
+                        className={`whitespace-nowrap text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
+                            }`}
+                    >
+                        {t("nav.market")}
+                    </a>
+                    <a
                         href="#investment"
-                        className={`text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
+                        className={`whitespace-nowrap text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
                             }`}
                     >
                         {t("nav.investment")}
                     </a>
                     <a
                         href="#location"
-                        className={`text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
+                        className={`whitespace-nowrap text-sm font-light tracking-wide hover:opacity-70 transition-opacity duration-300 ${scrolled ? "text-black" : "text-white"
                             }`}
                     >
                         {t("nav.location")}
@@ -76,7 +90,7 @@ export default function Navigation() {
                             <span key={lang} className="flex items-center gap-2">
                                 <button
                                     onClick={() => setLanguage(lang)}
-                                    className={`text-sm font-light tracking-wide transition-all duration-300 ${language === lang
+                                    className={`whitespace-nowrap text-sm font-light tracking-wide transition-all duration-300 ${language === lang
                                         ? scrolled ? "text-black font-normal" : "text-white font-normal"
                                         : scrolled ? "text-black/50 hover:text-black" : "text-white/50 hover:text-white"
                                         }`}
@@ -94,13 +108,13 @@ export default function Navigation() {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className="lg:hidden flex gap-3 items-center">
+                <div className="xl:hidden flex flex-shrink-0 gap-3 items-center">
                     <div className="flex gap-1 items-center">
                         {(["en", "ja", "zh"] as const).map((lang, i, arr) => (
                             <span key={lang} className="flex items-center gap-1">
                                 <button
                                     onClick={() => setLanguage(lang)}
-                                    className={`text-xs font-light tracking-wide transition-colors duration-300 ${language === lang
+                                    className={`whitespace-nowrap text-xs font-light tracking-wide transition-colors duration-300 ${language === lang
                                         ? scrolled ? "text-black" : "text-white"
                                         : scrolled ? "text-black/40" : "text-white/40"
                                         }`}
@@ -115,7 +129,7 @@ export default function Navigation() {
                     </div>
                     <a
                         href="#contact"
-                        className={`px-4 py-2 text-xs font-light tracking-wide transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-white text-black"
+                        className={`hidden sm:inline-block whitespace-nowrap px-4 py-2 text-xs font-light tracking-wide transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-white text-black"
                             }`}
                     >
                         {t("nav.contact")}

@@ -1,74 +1,89 @@
-# Terelj Resort — AI & LLM Overview
+# Terelj Wellness Resort — AI & LLM Overview
 
-## What is Terelj Resort?
+## What is Terelj Wellness Resort?
 
-Terelj Resort is a luxury hospitality and wellness development located in Terelj National Park, Töv Province, Mongolia. The project covers 5 hectares and is situated approximately 60 minutes by car (or 20 minutes by helicopter) from Ulaanbaatar's Chinggis Khaan International Airport.
+Terelj Wellness Resort is a planned villa-led mountain wellness retreat in Gorkhi-Terelj National Park, Töv Province, Mongolia. It comprises 47 private wellness villas and 8 glamping pods on 5 hectares, built in three phases over five years. The site is 50–76 km, about 1.5–2 hours by road, north-east of Ulaanbaatar.
+
+All images on the website are design-stage visualisations and may change through detailed design.
 
 ## Project Summary
 
-- **Name:** Terelj Resort (テレルジリゾート / 特勒勒吉度假村)
-- **Location:** Terelj National Park, Töv Province, Mongolia (47.879850°N, 107.405738°E)
-- **Total land area:** 5 hectares
-- **Distance from capital:** 60 minutes by car, 20 minutes by helicopter from Ulaanbaatar
-- **Project type:** Luxury hospitality & wellness resort development
-- **Investment stage:** Seeking VC and institutional investors
-- **Target investor markets:** Japan, China, United States
+- **Name:** Terelj Wellness Resort (テレルジ・ウェルネスリゾート / 特勒吉康养度假村)
+- **Location:** Gorkhi-Terelj National Park, Töv Province, Mongolia (47.879850°N, 107.405738°E)
+- **Site area:** 5 hectares, about 90% kept as natural grassland
+- **Distance from Ulaanbaatar:** 50–76 km, about 1.5–2 hours by road
+- **Accommodation:** 47 private wellness villas + 8 glamping pods
+- **Project type:** Villa-led wellness resort, built in three phases
+- **Investment stage:** Open to investment partners; investment deck available on request
+- **Guest markets:** Ulaanbaatar residents, China, South Korea, Japan, United States, Europe, Australia
 
-## Facilities
+## Phasing
 
-The resort development includes the following facilities:
+1. **Phase 1 (Year 1, 1.5 ha) — 15 villas:** wellness villas with private sauna, deep bath and full-height mountain glazing; lobby; reformer room; 80-seat restaurant with juice and herbal tea bar; open-air platform for sunrise classes. Soft opening about six months after construction starts.
+2. **Phase 2 (Years 2–3, +1.5 ha) — 20 more villas:** herbal-steam villas with cold plunge pools, screen-free villas, a 200 sqm traditional therapy centre with heated pool, an organic greenhouse.
+3. **Phase 3 (Years 4–5, +2 ha) — 12 more villas and 8 glamping pods:** hot-spring villas, which depend on a planned geothermal well (a survey comes before drilling; heated mineral-water pools are the fallback); conservation zone with WWF Mongolia; solar-powered glamping pods.
 
-1. Boutique hotel
-2. Restaurant
-3. Event hall / conference venue
-4. Spa & wellness center
-5. Onsen (hot spring baths)
-6. Pilates studio
-7. Private villas (studio, 1-bedroom, and 2-bedroom configurations)
+**Later option, decided separately:** a main building with about 40 hotel rooms and an event hall, built only once villa demand is proven. It is not part of the current plan.
 
-## Private Villa Options
+## Wellness Programme
 
-| Configuration | Capacity |
-|---------------|----------|
-| 2-bedroom villa | 4–5 guests |
-| 1-bedroom villa | 2–3 guests |
-| Studio villa | 2 guests |
+Services open with the phase that builds their facility (P1–P3).
 
-## Why Invest in Mongolia's Tourism Sector?
+- **Movement:** pilates and yoga, including sunrise sessions (P1); guided forest and ridge walks (P1); breathwork (P1)
+- **Heat, cold and water:** private sauna in every villa (P1); winter snow-and-sauna ritual (P1); Mongolian herbal steam with cold plunge (P2); heated indoor pool (P2); private hot-spring villas from a planned geothermal well (P3)
+- **Traditional Mongolian therapies:** in-villa herbal oil massage (P1); consultation with a traditional practitioner (P2); bone-setting by a bariachi (P2); moxibustion and cupping (P2); herbal and mineral baths (P2)
+- **Food:** cold-pressed juice and herbal tea bar (P1); summer airag with a herder family (P1); 3, 5 and 7-day detox menus (P2); cooking classes (P2)
+- **Mind and rest:** screen-free villas and sleep programme (P1); morin khuur sound sessions (P1); stargazing (P1); guided meditation and silent retreats (P2)
+- **Nature, culture and groups:** herder family visits and riding (P1); corporate retreats and buyouts (P1); grassland restoration with WWF Mongolia (P3); small weddings and festivals (P3)
 
-- Mongolia's tourism sector recorded 846,103 international arrivals in 2025, a 46% year-over-year increase.
-- Terelj National Park is Mongolia's most visited national park.
-- There is a significant shortage of luxury accommodation outside Ulaanbaatar.
-- Mongolia has a stable political environment and is strategically located between China and Russia.
-- The government has identified tourism as a key economic diversification strategy.
-- Growing affluent populations in China, Japan, and South Korea are seeking unique nature-based travel experiences.
+Traditional therapies are offered as wellness services by qualified practitioners, not as medical treatment.
 
-## Climate Advantage
+### Signature Programmes (inclusive packages)
 
-While Ulaanbaatar and major Asian cities reach 35–40°C in summer, Terelj National Park maintains a comfortable 20–25°C. This makes it a compelling escape destination for urban professionals and a differentiated product versus competing regional resort markets.
+| Programme | Length | For |
+|-----------|--------|-----|
+| City Reset | 2–3 nights | Ulaanbaatar residents, weekends |
+| Steppe Detox | 5 nights | Guests from Korea, Japan and China, summer |
+| Winter Sauna Retreat | 7 nights | Long-haul and corporate guests, December–February |
 
-## Revenue Streams
+## Year-Round Calendar
 
-The resort is designed for year-round operation with multiple diversified revenue streams:
+- **Summer:** sunrise pilates on the open-air platform, walks in the park, meals on the terrace.
+- **Winter (December–February):** sauna and herbal therapy retreats. Glazed galleries link every building.
 
-- Hotel room revenue
-- Villa rental income
-- Restaurant & F&B
-- Spa, onsen, and wellness treatments
-- Event hall rentals (corporate retreats, weddings)
-- Pilates and fitness programming
+## Market (with sources)
+
+- Mongolia had a record **847,170 foreign visitors in 2025**, up **16.5%** on 2024. (National Statistics Office of Mongolia, via CEIC)
+- Tourism revenue in 2025: **$1.6B**. (Ministry of Environment and Tourism, via GoGo Mongolia)
+- Government target: **2 million foreign visitors a year by 2030**. (The UB Post, Feb 2025)
+- Arrivals in the first half of 2026 were up 19.8% on 2025; the full-year 2025 total was passed by early October. (Asia News Network, Jul 2026; Travel and Tour World, Oct 2026)
+- 47% of visitors come for eco and adventure experiences. (The UB Post, Feb 2025)
+- 3.2M domestic trips in 2024. (NSO Domestic Tourism Survey 2025, via GoGo Mongolia)
+- Global wellness tourism grew **11.4%** in 2024–25 and **15.6%** in Asia; thermal and mineral springs grew **10.4%**; the global wellness economy reached **$7.5T** in 2025. (Global Wellness Institute, Global Wellness Economy Monitor 2026)
+- Gorkhi-Terelj is Mongolia's most visited national park. Its accommodation is mostly camps and mid-range resorts, with one established luxury hotel.
+
+## Guest Markets and Access
+
+- **China:** direct flights from Beijing, Shanghai, Hohhot, Ordos and Hong Kong
+- **South Korea:** about 3 h 40 from Seoul, around 35 direct flights a week; 90 days visa-free
+- **Japan:** direct from Tokyo and Osaka, about 40 flights a week from Tokyo
+- **United States:** one stop via Seoul, Tokyo, Beijing or Istanbul
+- **Europe:** direct from Frankfurt and Istanbul; EU visa-free through 2026
+- **Australia:** one stop via Seoul, Hong Kong or Beijing; 30 days visa-free
 
 ## Contact & Investor Relations
 
 - **Email:** tserenbal.g@gmail.com
 - **Phone:** +976 9919 4118
+- **WeChat:** wxid_wu6xn6p3tid412
 - **Website:** https://www.terelj-wellness.com
-- **Investment deck:** Available on request via email
+- **Investment deck:** available on request (includes financial projections and the proposed partnership structure)
 
-## Languages Supported
+## Pages
 
-This website is available in English (EN), Japanese (日本語), and Simplified Chinese (简体中文).
+- / — Main page (English; Japanese at ?lang=ja; Simplified Chinese at ?lang=zh)
+- /gallery — Design-stage visualisations
 
 ---
 
-*This file is maintained for AI language model indexing and generative search engine discovery. Last updated: 2026.*
+*This file is maintained for AI language model indexing and generative search engine discovery. Source: Terelj Wellness Resort investment booklet, November 2026.*

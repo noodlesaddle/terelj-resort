@@ -19,9 +19,10 @@ export default function DarkIntro() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative py-32 md:py-48 px-8 md:px-20 bg-black text-white overflow-hidden">
+        <section ref={sectionRef} id="calendar" className="relative py-32 md:py-48 px-8 md:px-20 bg-black text-white overflow-hidden">
             <div className="relative max-w-5xl mx-auto">
                 <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                    <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-white/50 mb-6">{t("intro.eyebrow")}</p>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 tracking-tight leading-tight whitespace-pre-line">
                         {t("intro.title")}
                     </h2>
@@ -30,12 +31,12 @@ export default function DarkIntro() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                         <div>
-                            <h3 className="text-2xl font-bold mb-4">{t("intro.climate.title")}</h3>
-                            <p className="text-lg text-white/70 font-light leading-relaxed">{t("intro.climate.desc")}</p>
+                            <h3 className="text-2xl font-bold mb-4">{t("intro.summer.title")}</h3>
+                            <p className="text-lg text-white/70 font-light leading-relaxed">{t("intro.summer.desc")}</p>
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold mb-4">{t("intro.work.title")}</h3>
-                            <p className="text-lg text-white/70 font-light leading-relaxed">{t("intro.work.desc")}</p>
+                            <h3 className="text-2xl font-bold mb-4">{t("intro.winter.title")}</h3>
+                            <p className="text-lg text-white/70 font-light leading-relaxed">{t("intro.winter.desc")}</p>
                         </div>
                     </div>
                     <div className="mt-12 pt-8 border-t border-white/20">

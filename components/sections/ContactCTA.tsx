@@ -42,7 +42,7 @@ export default function ContactCTA() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                        <a href="mailto:tserenbal.g@gmail.com">
+                        <a href="mailto:tserenbal.g@gmail.com?subject=Terelj%20Wellness%20Resort%20%E2%80%94%20Investment%20Deck%20Request">
                             <Button
                                 size="lg"
                                 className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6 h-auto font-light"
@@ -61,7 +61,7 @@ export default function ContactCTA() {
                         </a>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/20">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-white/20">
                         <div>
                             <div className="text-sm text-white/60 mb-2 uppercase tracking-wider">{t("contact.email")}</div>
                             <a href="mailto:tserenbal.g@gmail.com" className="text-lg hover:text-white/80 transition-colors">
@@ -75,9 +75,13 @@ export default function ContactCTA() {
                             </a>
                         </div>
                         <div>
+                            <div className="text-sm text-white/60 mb-2 uppercase tracking-wider">{t("contact.wechat")}</div>
+                            <p className="text-lg break-all select-all">wxid_wu6xn6p3tid412</p>
+                        </div>
+                        <div>
                             <div className="text-sm text-white/60 mb-2 uppercase tracking-wider">{t("contact.location")}</div>
                             <p className="text-lg">
-                                Terelj National Park, Mongolia
+                                {t("location.address")}
                             </p>
                         </div>
                     </div>

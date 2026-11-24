@@ -66,17 +66,17 @@ export default function GalleryPage() {
     return (
         <main className="min-h-screen bg-white">
             <nav className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
-                <div className="max-w-7xl mx-auto px-8 md:px-16 py-6 md:py-8 flex justify-between items-center">
-                    <Link href="/" className="text-lg md:text-xl font-light tracking-widest text-black hover:opacity-70 transition-opacity">
-                        {language === "ja" ? "テレルジリゾート" : language === "zh" ? "特勒勒吉度假村" : "TERELJ RESORT"}
+                <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16 py-6 md:py-8 flex justify-between items-center gap-4">
+                    <Link href="/" className="text-sm leading-snug tracking-wider sm:whitespace-nowrap sm:text-lg sm:tracking-widest md:text-xl font-light text-black hover:opacity-70 transition-opacity">
+                        {t("nav.brand")}
                     </Link>
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-shrink-0 items-center gap-6">
                         <div className="flex gap-2 items-center">
                             {(["en", "ja", "zh"] as const).map((lang, i, arr) => (
                                 <span key={lang} className="flex items-center gap-2">
                                     <button
                                         onClick={() => setLanguage(lang)}
-                                        className={`text-sm font-light transition-all ${language === lang ? "text-black" : "text-gray-400"}`}
+                                        className={`whitespace-nowrap text-xs sm:text-sm font-light transition-all ${language === lang ? "text-black" : "text-gray-400"}`}
                                     >
                                         {lang === "en" ? "EN" : lang === "ja" ? "日本語" : "简体"}
                                     </button>
@@ -86,7 +86,7 @@ export default function GalleryPage() {
                                 </span>
                             ))}
                         </div>
-                        <Link href="/" className="text-sm font-light hover:opacity-70 transition-opacity text-black">
+                        <Link href="/" className="hidden sm:inline whitespace-nowrap text-sm font-light hover:opacity-70 transition-opacity text-black">
                             {t("gpage.back")}
                         </Link>
                     </div>
@@ -98,6 +98,7 @@ export default function GalleryPage() {
                     <div className="mb-16">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">{t("gpage.title")}</h1>
                         <p className="text-lg md:text-xl text-gray-600 font-light">{t("gpage.subtitle")}</p>
+                        <p className="mt-4 text-sm text-gray-400 font-light">{t("gallery.note")}</p>
                     </div>
 
                     <div className="flex flex-wrap gap-4 mb-12">
@@ -111,7 +112,7 @@ export default function GalleryPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {filteredImages.map((image) => (
                             <div key={image.id} className="group cursor-pointer relative aspect-[4/3] bg-gray-100 overflow-hidden" onClick={() => setSelectedImage(image.id)}>
-                                <Image src={image.src} alt={t(image.titleKey)} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <Image src={image.src} alt={t(image.titleKey)} fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-110" />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <p className="text-white text-sm font-light">{t(image.titleKey)}</p>
@@ -129,7 +130,7 @@ export default function GalleryPage() {
                     <button className="absolute left-4 md:left-10 text-white text-4xl font-light hover:opacity-70 z-10" onClick={(e) => { e.stopPropagation(); handlePrevious(); }}>‹</button>
                     <button className="absolute right-4 md:right-10 text-white text-4xl font-light hover:opacity-70 z-10" onClick={(e) => { e.stopPropagation(); handleNext(); }}>›</button>
                     <div className="relative w-full h-full max-w-7xl" onClick={(e) => e.stopPropagation()}>
-                        <Image src={filteredImages.find(img => img.id === selectedImage)?.src || ""} alt={t(filteredImages.find(img => img.id === selectedImage)?.titleKey || "")} fill className="object-contain" quality={100} />
+                        <Image src={filteredImages.find(img => img.id === selectedImage)?.src || ""} alt={t(filteredImages.find(img => img.id === selectedImage)?.titleKey || "")} fill sizes="100vw" className="object-contain" quality={100} />
                     </div>
                     <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-white">
                         <p className="text-lg md:text-xl font-light mb-1">{t(filteredImages.find(img => img.id === selectedImage)?.titleKey || "")}</p>

@@ -52,6 +52,7 @@ export default function PropertyGallery() {
                             src={item.image}
                             alt={t(item.titleKey)}
                             fill
+                            sizes="100vw"
                             className="object-cover"
                             quality={90}
                         />
@@ -68,6 +69,9 @@ export default function PropertyGallery() {
                     </div>
                 </div>
             ))}
+            <p className="px-8 md:px-20 pb-16 text-xs md:text-sm text-gray-400 font-light text-center">
+                {t("gallery.note")}
+            </p>
         </section>
     );
 }

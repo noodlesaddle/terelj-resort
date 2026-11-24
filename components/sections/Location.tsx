@@ -35,7 +35,7 @@ export default function Location() {
                             {t("location.title")}
                         </h2>
                         <p className="text-xs md:text-sm text-gray-400 text-right font-light">
-                            Terelj National Park, Mongolia
+                            {t("location.address")}
                         </p>
                     </div>
 
@@ -59,7 +59,7 @@ export default function Location() {
 
                         {/* Access Information */}
                         <div className="space-y-12 md:space-y-16">
-                            {/* By Car */}
+                            {/* By Road */}
                             <div>
                                 <h3 className="text-xl md:text-2xl font-light mb-4 tracking-tight">
                                     {t("location.byCar")}
@@ -67,21 +67,22 @@ export default function Location() {
                                 <p className="text-sm md:text-base text-gray-500 font-light leading-relaxed mb-3">
                                     {t("location.byCar.desc")}
                                 </p>
-                                <p className="text-2xl md:text-3xl font-light">
-                                    {t("location.60minutes")}
-                                </p>
+                                <div className="flex flex-wrap gap-x-12 gap-y-4">
+                                    <p className="text-2xl md:text-3xl font-light">{t("location.time")}</p>
+                                    <p className="text-2xl md:text-3xl font-light">
+                                        <span className="text-sm text-gray-400 mr-3 align-middle">{t("location.distanceLabel")}</span>
+                                        {t("location.distance")}
+                                    </p>
+                                </div>
                             </div>
 
-                            {/* By Helicopter */}
+                            {/* Flights */}
                             <div>
                                 <h3 className="text-xl md:text-2xl font-light mb-4 tracking-tight">
-                                    {t("location.byHelicopter")}
+                                    {t("location.flights")}
                                 </h3>
-                                <p className="text-sm md:text-base text-gray-500 font-light leading-relaxed mb-3">
-                                    {t("location.byHelicopter.desc")}
-                                </p>
-                                <p className="text-2xl md:text-3xl font-light">
-                                    {t("location.20minutes")}
+                                <p className="text-sm md:text-base text-gray-500 font-light leading-relaxed">
+                                    {t("location.flights.desc")}
                                 </p>
                             </div>
 
